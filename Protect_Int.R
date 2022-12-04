@@ -65,16 +65,18 @@ ggplot(data = diamonds) +
 
 install.packages("ggstance")
 install.packages("patchwork")
+install.packages("PerformanceAnalytics")
 
 library("ggstance")
 library("patchwork")
+library("PerformanceAnalytics")
 
 
 #Matris de correlacion
-pairs(diamonds)
+pairs(~ diamonds$price + diamonds$carat + diamonds$cut , data=diamonds)
 
 
-
+#diferencia de dos graficas
 g2 <- ggplot(mpg, aes(class, hwy, fill = factor(cyl))) +
   geom_boxplot() +
   coord_flip()
