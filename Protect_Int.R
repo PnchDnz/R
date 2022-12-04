@@ -70,6 +70,8 @@ library("ggstance")
 library("patchwork")
 
 
+#Matris de correlacion
+pairs(diamonds)
 
 
 
